@@ -3,12 +3,15 @@ Definition of urls for Django1.
 """
 
 from django.conf.urls import include, url
+import HelloDjangoApp.views
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = [
+    url(r'^$', HelloDjangoApp.views.index, name='index'),
+    url(r'^home$', HelloDjangoApp.views.index, name='home')
     # Examples:
     # url(r'^$', Django1.views.home, name='home'),
     # url(r'^Django1/', include('Django1.Django1.urls')),
